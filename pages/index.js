@@ -172,7 +172,7 @@ export default function Hello(){
         <div id="buttonWrapper">
           <button onClick={changeForm}>Log In</button>
           <div></div>
-          <button class="active" onClick={changeForm}>Sign Up</button>
+          <button className="active" onClick={changeForm}>Sign Up</button>
         </div>
       </div>
     </>
