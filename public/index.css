@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+body {
+  font-family: 'Inter', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  background: #edf2f7;
+}
+
+input {
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 10px;
+  border: none;
+  border-width: 2px;
+  border-radius: 5px;
+  height: 20px;
+  font-size: 16px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  color: #4a5568;
+  line-height: 20px;
+  padding: 8px 12px;
+}
+
+input[type=submit] {
+  background-color: #4299e1;
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+  height: 35px;
+}
+
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#signupForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  width: 400px;
+  -webkit-transition: margin 0s, opacity 250ms;
+  transition: margin 0s, opacity 250ms;
+}
+
+#signupForm input[type="submit"] {
+  margin-bottom: 5px;
+}
+
+#loginForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  width: 400px;
+  -webkit-transition: margin 0s, opacity 250ms;
+  transition: margin 0s, opacity 250ms;
+  position: absolute;
+  opacity: 0;
+  top: calc(50vh - 180px);
+  left: calc(50vw - 200px);
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#formWrapper {
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 15px;
+  width: 400px;
+  border-radius: 5px;
+  -webkit-transition-delay: 500ms;
+          transition-delay: 500ms;
+  -webkit-transition: height 450ms, margin-top 450ms, margin-bottom 450ms;
+  transition: height 450ms, margin-top 450ms, margin-bottom 450ms;
+  height: 560px;
+  margin-top: calc(calc(calc(50vh - 280px) / 2) - 10px);
+}
+
+#formWrapper.active {
+  height: 230px;
+  margin-top: calc(50vh - 208px);
+  margin-bottom: 0;
+}
+
+label {
+  color: #4a5568;
+  font-weight: 500;
+  font-size: 15px;
+  margin-bottom: 5px;
+  margin-left: 2px;
+}
+
+#buttonWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 5px;
+}
+
+#buttonWrapper button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#buttonWrapper button.active {
+  text-decoration: underline;
+  -webkit-text-decoration-color: #4299e1;
+          text-decoration-color: #4299e1;
+  text-underline-offset: 1px;
+  text-decoration-thickness: 2.5px;
+}
+
+#buttonWrapper div {
+  width: 0px;
+  height: 22px;
+  border-right: solid 1px #4a5568;
+}
+
+@media screen and (max-width: 600px) {
+  #formWrapper {
+    width: 85vw;
+  }
+  input {
+    width: 79vw;
+  }
+  label {
+    width: 79vw;
+  }
+  #loginForm {
+    left: 7.5vw;
+    width: 85vw;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #signupForm {
+    width: 85vw;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    margin: 0;
+    padding: 0;
+  }
+}
+/*# sourceMappingURL=index.css.map */
