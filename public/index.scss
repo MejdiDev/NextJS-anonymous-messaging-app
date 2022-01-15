@@ -7,6 +7,7 @@ body {
 	align-items: center;
 	flex-flow: column nowrap;
 	background: #edf2f7;
+	overflow-y: scroll !important;
 }
 
 input {
@@ -31,10 +32,15 @@ input {
 		height: 35px;
 	}
 
+	&.false {
+		box-shadow: 0px 0px 0px 1px red;
+	}
+
 	&::-webkit-outer-spin-button {
 		-webkit-appearance: none;
 		margin: 0;
 	}
+
 	&::-webkit-inner-spin-button {
 		-webkit-appearance: none;
 		margin: 0;
@@ -42,24 +48,55 @@ input {
 }
 
 #signupForm {
+	transition-delay: 0s;
+	opacity: 0;
+	visibility: hidden;
 	display: flex;
 	flex-flow: column nowrap;
 	width: 400px;
 	transition: margin 0s, opacity 250ms;
-	input[type="submit"] {
+
+	&.active {
+		transition-delay: 450ms;
+		opacity: 1;
+		visibility: visible;
+	}
+
+	input[type=submit] {
 		margin-bottom: 5px;
 	}
 }
 
+#errorSignup, #errorLogin {
+	color: #ff0000;
+	width: 100%;
+	text-align: center;
+	margin-top: 5px;
+	margin-bottom: 15px;
+	display: none;
+
+	&.active {
+		display: block;
+	}
+}
+
 #loginForm {
+	visibility: hidden;
 	display: flex;
 	flex-flow: column nowrap;
 	width: 400px;
+	transition-delay: 0s;
 	transition: margin 0s, opacity 250ms;
 	position: absolute;
 	opacity: 0;
 	top: calc(50vh - 180px);
-	left: calc(50vw - 200px);
+	left: calc(50% - 200px);
+
+	&.active {
+		transition-delay: 450ms;
+		opacity: 1;
+		visibility: visible;
+	}
 }
 
 input[type=number] {
@@ -67,6 +104,7 @@ input[type=number] {
 }
 
 #formWrapper {
+	height: 560px;
 	background: rgb(255, 255, 255);
 	display: flex;
 	flex-flow: column nowrap;
@@ -76,14 +114,12 @@ input[type=number] {
 	border-radius: 5px;
 	transition-delay: 500ms;
 	transition: height 450ms, margin-top 450ms, margin-bottom 450ms;
-	height: 560px;
 	margin-top: calc(calc(calc(50vh - 280px) / 2) - 10px);
-}
 
-#formWrapper.active {
-	height: 230px;
-	margin-top: calc(50vh - 208px);
-	margin-bottom: 0;
+	&.active {
+		margin-top: calc(50vh - 208px);
+		margin-bottom: 0;
+	}
 }
 
 label {

@@ -26,9 +26,13 @@ p {
     align-items: center;
 
     div {
-        width: 15px;
-        height: 15px;
-        border: solid;
+        width: 35px;
+        height: 35px;
+        background-image: url('./menu.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
         visibility: hidden;
     }
 }
@@ -135,10 +139,13 @@ p {
         }
 
         div {
-            width: 20px;
-            height: 20px;
+            width: 30px;
+            height: 30px;
+            background-image: url('./copy.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             cursor: pointer;
-            border: solid;
         }
     }
 }

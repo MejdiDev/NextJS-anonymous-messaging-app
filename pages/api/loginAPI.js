@@ -6,8 +6,6 @@ export default async function handler( req, res ){
 
     const userExists = await prisma.users.findUnique({where: {userName: data.userName}})
 
-    console.log(userExists)
-
     if(Object.keys(data).length === 1) {
         if(userExists) {
             res.status(200).json({bool: true})
@@ -31,7 +29,7 @@ export default async function handler( req, res ){
                 res.status(200).json({
                     bool: false,
                     slug: "",
-                    error: "wrong password !"
+                    error: true
                 })
             }
         }
@@ -56,7 +54,7 @@ export default async function handler( req, res ){
 
         else{
             res.status(200).json({
-                error: "User already exists"
+                error: true
             })
         }
     }
