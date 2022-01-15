@@ -138,7 +138,7 @@ export default function UserData() {
             <div id="overlay" onClick={hideOverlay}>
                 <div id="fullMessage"></div>
                 <div id="fullLink">
-                    <input type="text" value={'http://localhost:3000/writeTo/' + data[data.length - 1]}/>
+                    <input type="text" value={'https://mejdi882-anony-messaging-app.herokuapp.com/writeTo/' + data[data.length - 1]}/>
                     <div onClick={copyToClipboard} id="copyButton"></div>
                 </div>
             </div>
