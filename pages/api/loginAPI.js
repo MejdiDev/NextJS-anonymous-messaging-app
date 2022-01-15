@@ -45,7 +45,6 @@ export default async function handler( req, res ){
     else {
         if(!userExists) {
             data.phoneNumber = parseInt(data.phoneNumber)
-            data.dateOfBirth = data.dateOfBirth.replaceAll('-', '/')
 
             const response = await prisma.users.create({ data })
 
